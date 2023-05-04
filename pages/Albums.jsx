@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 export default function Albums() {
-    const placeholderImage = 'https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png'
-
     const [albums, setAlbums] = React.useState([])
     React.useEffect(() => {
         fetch("/api/albums")
@@ -14,7 +12,7 @@ export default function Albums() {
     const albumElements = albums.map(album => (
         <div key={album.id} className="album-tile">
             <Link to={`/albums/${album.id}`}>
-                <img src={album.imageUrl ? album.imageUrl : placeholderImage} />
+                <img src={album.imageUrl} />
                 <div className="album-info">
                     <h3>{album.name}</h3>
                     <p>${album.price}<span>/day</span></p>
