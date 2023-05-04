@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Vans from "./pages/Vans"
-import VanDetail from "./pages/VanDetail"
+import Albums from "./pages/Albums"
+import AlbumDetail from "./pages/AlbumDetail"
 import Layout from "./components/Layout"
 
 import "./server"
@@ -16,8 +16,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/albums" element={<Vans />} />
-          <Route path="/albums/:id" element={<VanDetail />} />
+          <Route path="/albums" element={<Albums />} />
+          <Route path="/albums/:id" element={<AlbumDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

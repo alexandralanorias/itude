@@ -1,14 +1,14 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
-export default function VanDetail() {
+export default function AlbumDetail() {
     const params = useParams()
-    const [album, setVan] = React.useState(null)
+    const [album, setAlbum] = React.useState(null)
 
     React.useEffect(() => {
         fetch(`/api/albums/${params.id}`)
             .then(res => res.json())
-            .then(data => setVan(data.albums))
+            .then(data => setAlbum(data.albums))
     }, [params.id])
 
     return (

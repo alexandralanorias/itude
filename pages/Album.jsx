@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-export default function Vans() {
-    const [albums, setVans] = React.useState([])
+export default function Albums() {
+    const [albums, setAlbums] = React.useState([])
     React.useEffect(() => {
         fetch("/api/albums")
             .then(res => res.json())
-            .then(data => setVans(data.albums))
+            .then(data => setAlbums(data.albums))
     }, [])
 
     const albumElements = albums.map(album => (
