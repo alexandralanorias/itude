@@ -146,11 +146,11 @@ header a:hover {
 
 
 /*** VAN PAGES ***/
-.van-list-container {
+.album-list-container {
     padding-inline: 23px
 }
 
-.van-list {
+.album-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -158,22 +158,22 @@ header a:hover {
     margin-top: 57px;
 }
 
-.van-tile a {
+.album-tile a {
     color: #161616;
     text-decoration: none;    
 }
 
-.van-tile img {
+.album-tile img {
     max-width: 100%;
     border-radius: 5px;
 }
 
-.van-list-container button {
+.album-list-container button {
     margin-right: 20px;
     cursor: pointer;
 }
 
-.van-type {
+.album-type {
     height: 34px;
     padding: 6px 26px;
     font-style: normal;
@@ -185,31 +185,31 @@ header a:hover {
     transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.van-type:hover {
+.album-type:hover {
     color: #FFEAD0;
 }
 
-.van-type:focus {
+.album-type:focus {
     outline: none;
 }
 
-.van-type.selected {
+.album-type.selected {
     color: #FFEAD0;
 }
 
-.van-type.simple:hover, .van-type.simple.selected {
+.album-type.simple:hover, .album-type.simple.selected {
     background-color: #E17654;
 }
 
-.van-type.rugged:hover, .van-type.rugged.selected {
+.album-type.rugged:hover, .album-type.rugged.selected {
     background-color: #115E59;
 }
 
-.van-type.luxury:hover, .van-type.luxury.selected {
+.album-type.luxury:hover, .album-type.luxury.selected {
     background-color: #161616;
 }
 
-.van-type.clear-filters {
+.album-type.clear-filters {
     margin-left: -20px;
     height: 34px;
     padding: 6px 26px;
@@ -222,58 +222,58 @@ header a:hover {
     color: #4D4D4D;
 }
 
-i[class*='van-type-'] {
+i[class*='album-type-'] {
     padding: 7px 14px;
 }
 
-.van-detail-container {
+.album-detail-container {
     padding: 27px;
 }
 
-.van-detail-container .back-button {
+.album-detail-container .back-button {
     color: black;
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {
+.album-detail-container .back-button:visited {
     
 }
 
-.van-detail-container .back-button span {
+.album-detail-container .back-button span {
     text-decoration: underline;
 }
 
-.van-detail {
+.album-detail {
     display: flex;
     flex-direction: column;
     color: #161616;
 }
 
-.van-detail img {
+.album-detail img {
     border-radius: 5px;
     margin-block: 47px;
 }
 
-.van-detail h2 {
+.album-detail h2 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.van-detail > i {
+.album-detail > i {
     align-self: flex-start;
 }
 
-.van-detail .van-price {
+.album-detail .album-price {
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
-.van-detail .van-price span {
+.album-detail .album-price span {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-.van-detail .link-button {
+.album-detail .link-button {
     background-color: #FF8C38;
     color: white;
     font-size: 1.125rem;

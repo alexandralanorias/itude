@@ -3,26 +3,26 @@ import { useParams } from "react-router-dom"
 
 export default function VanDetail() {
     const params = useParams()
-    const [van, setVan] = React.useState(null)
+    const [album, setVan] = React.useState(null)
 
     React.useEffect(() => {
-        fetch(`/api/vans/${params.id}`)
+        fetch(`/api/albums/${params.id}`)
             .then(res => res.json())
-            .then(data => setVan(data.vans))
+            .then(data => setVan(data.albums))
     }, [params.id])
 
     return (
-        <div className="van-detail-container">
-            {van ? (
-                <div className="van-detail">
-                    <img src={van.imageUrl} />
-                    <i className={`van-type ${van.type} selected`}>
-                        {van.type}
+        <div className="album-detail-container">
+            {album ? (
+                <div className="album-detail">
+                    <img src={album.imageUrl} />
+                    <i className={`album-type ${album.type} selected`}>
+                        {album.type}
                     </i>
-                    <h2>{van.name}</h2>
-                    <p className="van-price"><span>${van.price}</span>/day</p>
-                    <p>{van.description}</p>
-                    <button className="link-button">Rent this van</button>
+                    <h2>{album.name}</h2>
+                    <p className="album-price"><span>${album.price}</span>/day</p>
+                    <p>{album.description}</p>
+                    <button className="link-button">Rent this album</button>
                 </div>
             ) : <h2>Loading...</h2>}
         </div>

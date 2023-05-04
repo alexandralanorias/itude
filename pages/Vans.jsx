@@ -2,31 +2,31 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 export default function Vans() {
-    const [vans, setVans] = React.useState([])
+    const [albums, setVans] = React.useState([])
     React.useEffect(() => {
-        fetch("/api/vans")
+        fetch("/api/albums")
             .then(res => res.json())
-            .then(data => setVans(data.vans))
+            .then(data => setVans(data.albums))
     }, [])
 
-    const vanElements = vans.map(van => (
-        <div key={van.id} className="van-tile">
-            <Link to={`/vans/${van.id}`}>
-                <img src={van.imageUrl} />
-                <div className="van-info">
-                    <h3>{van.name}</h3>
-                    <p>${van.price}<span>/day</span></p>
+    const albumElements = albums.map(album => (
+        <div key={album.id} className="album-tile">
+            <Link to={`/albums/${album.id}`}>
+                <img src={album.imageUrl} />
+                <div className="album-info">
+                    <h3>{album.name}</h3>
+                    <p>${album.price}<span>/day</span></p>
                 </div>
-                <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                <i className={`album-type ${album.type} selected`}>{album.type}</i>
             </Link>
         </div>
     ))
 
     return (
-        <div className="van-list-container">
-            <h1>Explore our van options</h1>
-            <div className="van-list">
-                {vanElements}
+        <div className="album-list-container">
+            <h1>Explore our album options</h1>
+            <div className="album-list">
+                {albumElements}
             </div>
         </div>
     )
