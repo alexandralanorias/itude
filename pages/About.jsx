@@ -9,7 +9,7 @@ export default function About() {
             <div className="about-page-content">
                 <h1>Can't find the perfect place to grab a classical track?</h1>
                 <p>Worry no more! Our mission is to add a dramatic flair to your listening experience with the perfect classical recording. From Bach to Beethoven, Mozart to Chopin, and even Shostakovich to Bartók, our albums are tried and tested must-haves for classical music enthusiasts on the search for a new rental or even purchase. (Purchases costs extra 😉)</p>
-                <p>Our team is full of classical music aficionados who know firsthand the magic of listening to, take for example, a vinyl recording of Tchaikovsky's Fifth Symphonyin E minor, performed by the New York Philharmonic under the skillful baton of Leonard Bernstein.</p>
+                <p>Our team is full of classical music aficionados who know firsthand the magic of listening to, take for example, a vinyl recording of Tchaikovsky's Fifth Symphony in E minor, performed by the New York Philharmonic under the skillful baton of Leonard Bernstein.</p>
             </div>
             <div className="about-page-cta">
                 <h2>Your listening experience is waiting.<br />Your album is ready.</h2>
