@@ -45,12 +45,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-img {
-    max-width: 500px;
-    height: auto;
-    margin:auto;
-}
-
 .link-button {
     display: inline-block;
     text-align: center;
@@ -256,6 +250,8 @@ i[class*='album-type-'] {
 }
 
 .album-detail img {
+    width: auto;
+    margin:auto;
     border-radius: 5px;
     margin-block: 47px;
 }
