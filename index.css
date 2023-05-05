@@ -250,7 +250,7 @@ i[class*='album-type-'] {
 }
 
 .album-detail img {
-    width: 100%;
+    max-width: 100%;
     height:auto;
     margin:auto;
     border-radius: 5px;
