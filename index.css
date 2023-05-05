@@ -282,7 +282,26 @@ i[class*='album-type-'] {
 @media screen and (max-width: 1920px) {
     .album-detail img {
         border-radius: 5px;
+        margin: auto;
         margin-block: 47px;
-        width: 40%
+        width: 25%
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .album-detail img {
+        border-radius: 5px;
+        margin: auto;
+        margin-block: 47px;
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .album-detail img {
+        border-radius: 5px;
+        margin: auto;
+        margin-block: 47px;
+        width: 100%
     }
 }
