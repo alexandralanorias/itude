@@ -288,16 +288,6 @@ i[class*='album-type-'] {
     font-size: 1.5rem;
 }
 
-@media all and (max-width:30em){
-    .album-detail .link-button {
-        display:block;
-        margin:0.4em auto;
-        background-color: #FF8C38;
-        color: white;
-        font-size: 1.125rem;
-    }
-}
-
 .album-detail .link-button {
     background-color: #FF8C38;
     color: white;
