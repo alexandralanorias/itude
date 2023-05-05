@@ -2,7 +2,6 @@ import React from "react"
 import { useParams } from "react-router-dom"
 
 export default function AlbumDetail() {
-    const placeholderImage = "https://alexandralanorias.github.io/images/itude/argerich-rach3-tchaik1"
     const params = useParams()
     const [album, setAlbum] = React.useState(null)
 
@@ -16,7 +15,7 @@ export default function AlbumDetail() {
         <div className="album-detail-container">
             {album ? (
                 <div className="album-detail">
-                    <img src={album.imageUrl ? album.imageUrl : placeholderImage} />
+                    <img src={album.imageUrl} />
                     <i className={`album-type ${album.type} selected`}>
                         {album.type}
                     </i>
