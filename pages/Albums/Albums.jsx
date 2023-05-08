@@ -24,7 +24,7 @@ export default function Albums() {
 
     return (
         <div className="album-list-container">
-            <h1>Explore our album options</h1>
+            <h1>Explore our album catalogue</h1>
             <div className="album-list">
                 {albumElements}
             </div>
