@@ -277,9 +277,18 @@ i[class*='album-type-'] {
     text-decoration: underline;
 }
 
+@media only screen and (min-width: 1000px) {
+    /* For large screens: */
+    .album-detail {
+        margin-right: 200px; 
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        color: #161616;
+    }
+}
+
 .album-detail {
-    margin-right: 200px; 
-    margin-left: 200px;
     display: flex;
     flex-direction: column;
     color: #161616;
