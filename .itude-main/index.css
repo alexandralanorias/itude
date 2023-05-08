@@ -18,12 +18,6 @@ body {
   scrollbar-width: none;
 }
 
-.site-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     height: 110px;
     display: flex;
@@ -51,22 +45,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-main {
-    margin-bottom: 84px;
-}
-
-footer {
-    background-color: #161616;
-    color: #AAAAAA;
-    height: 74px;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    font-weight: 500;
-}
-
 .link-button {
     display: inline-block;
     text-align: center;
@@ -80,25 +58,13 @@ footer {
     transition: transform .1s ease-in-out;
 }
 
-.back-button {
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin-top: 60px;
-    margin-left: 26px;
-}
-
-.back-button span:hover {
-    text-decoration: underline;
-}
-
 .link-button:hover {
     transform: translate(1px, 1px);
 }
 
 /*** HOME PAGE ***/
 .home-container {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.png") no-repeat center center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -231,15 +197,15 @@ footer {
     color: #FFEAD0;
 }
 
-.album-type.simple:hover, .album-type.simple.selected {
+.album-type.new:hover, .album-type.new.selected {
     background-color: #E17654;
 }
 
-.album-type.rugged:hover, .album-type.rugged.selected {
+.album-type.trending:hover, .album-type.trending.selected {
     background-color: #115E59;
 }
 
-.album-type.luxury:hover, .album-type.luxury.selected {
+.album-type.classic:hover, .album-type.classic.selected {
     background-color: #161616;
 }
 
@@ -277,6 +243,17 @@ i[class*='album-type-'] {
     text-decoration: underline;
 }
 
+@media only screen and (min-width: 1000px) {
+    /* For large screens: */
+    .album-detail {
+        margin-right: 200px; 
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        color: #161616;
+    }
+}
+
 .album-detail {
     display: flex;
     flex-direction: column;
@@ -284,6 +261,10 @@ i[class*='album-type-'] {
 }
 
 .album-detail img {
+    width: 100%;
+    max-width: 400px;
+    height:auto;
+    margin:auto;
     border-radius: 5px;
     margin-block: 47px;
 }
@@ -311,138 +292,4 @@ i[class*='album-type-'] {
     background-color: #FF8C38;
     color: white;
     font-size: 1.125rem;
-}
-
-.host-nav {
-    display: flex;
-}
-
-.host-nav a {
-    text-decoration: none;
-    color: #4D4D4D;
-    font-weight: 500;
-    padding: 5px 20px;
-}
-
-.host-nav a:hover {
-    color: #161616;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.host-album-link-wrapper {
-    color: unset;
-    text-decoration: unset;
-}
-
-.host-albums-list {
-    padding-inline: 26px;
-}
-
-.host-albums-title {
-    padding-inline: 26px;
-}
-
-.host-album-single {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    margin-bottom: 15px;
-    padding-block: 18px;
-    padding-left: 24px;
-}
-
-.host-album-single > img {
-    height: 70px;
-    border-radius: 5px;
-    margin-right: 17px;
-}
-
-.host-album-info h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-block: 10px;
-}
-
-.host-album-info p {
-    margin-block: 10px;
-}
-
-.host-album-detail-layout-container {
-    background-color: white;
-    padding: 24px;
-    margin: 30px 26px;
-}
-
-.host-album-detail {
-    display: flex;
-    align-items: center;
-}
-
-.host-album-detail > img {
-    height: 160px;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-
-.host-album-detail-info-text > h3 {
-    margin-top: 24px;
-    margin-bottom: 5px;
-    font-size: 26px;
-    font-weight: 700;
-}
-
-.host-album-detail-info-text > h4 {
-    font-size: 20px;
-    margin-block: 0;
-}
-
-.host-album-detail-nav {
-    display: flex;
-    margin-block: 25px;
-}
-
-.host-album-detail-nav a {
-    text-decoration: none;
-    color: #4D4D4D;
-    font-weight: 500;
-    padding: 5px 20px;
-}
-
-.host-album-detail-nav a:first-of-type {
-    text-decoration: none;
-    color: #4D4D4D;
-    font-weight: 500;
-    padding: 5px 15px;
-    margin-left: -15px;
-}
-
-.host-album-detail-nav a:hover {
-    color: #161616;
-    text-decoration: underline;
-    font-weight: 700;
-}
-
-.host-album-detail-info > h4 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-}
-.host-album-detail-info > h4 > span {
-    font-weight: 500;
-}
-
-.host-album-price {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.host-album-price > span {
-    font-size: 16px;
-    color: #4D4D4D;
-}
-
-.host-album-detail-image {
-    height: 100px;
-    border-radius: 5px;
 }

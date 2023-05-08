@@ -1,26 +1,26 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-export default function HostVans() {
-    const [vans, setVans] = React.useState([])
+export default function HostAlbums() {
+    const [albums, setAlbums] = React.useState([])
 
     React.useEffect(() => {
-        fetch("/api/host/vans")
+        fetch("/api/host/albums")
             .then(res => res.json())
-            .then(data => setVans(data.vans))
+            .then(data => setAlbums(data.albums))
     }, [])
 
-    const hostVansEls = vans.map(van => (
+    const hostAlbumsEls = albums.map(album => (
         <Link
-            to={`/host/vans/${van.id}`}
-            key={van.id}
-            className="host-van-link-wrapper"
+            to={`/host/albums/${album.id}`}
+            key={album.id}
+            className="host-album-link-wrapper"
         >
-            <div className="host-van-single" key={van.id}>
-                <img src={van.imageUrl} alt={`Photo of ${van.name}`} />
-                <div className="host-van-info">
-                    <h3>{van.name}</h3>
-                    <p>${van.price}/day</p>
+            <div className="host-album-single" key={album.id}>
+                <img src={album.imageUrl} alt={`Photo of ${album.name}`} />
+                <div className="host-album-info">
+                    <h3>{album.name}</h3>
+                    <p>${album.price}/day</p>
                 </div>
             </div>
         </Link>
@@ -28,12 +28,12 @@ export default function HostVans() {
 
     return (
         <section>
-            <h1 className="host-vans-title">Your listed vans</h1>
-            <div className="host-vans-list">
+            <h1 className="host-albums-title">Your listed albums</h1>
+            <div className="host-albums-list">
                 {
-                    vans.length > 0 ? (
+                    albums.length > 0 ? (
                         <section>
-                            {hostVansEls}
+                            {hostAlbumsEls}
                         </section>
 
                     ) : (

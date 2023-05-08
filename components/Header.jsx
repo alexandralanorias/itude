@@ -10,7 +10,7 @@ export default function Header() {
     
     return (
         <header>
-            <Link className="site-logo" to="/">#VanLife</Link>
+            <Link className="site-logo" to="/">&gt;&nbsp;ITUDE</Link>
             <nav>
                 <NavLink 
                     to="/host"
@@ -25,10 +25,10 @@ export default function Header() {
                     About
                 </NavLink>
                 <NavLink 
-                    to="/vans"
+                    to="/albums"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
-                    Vans
+                    Albums
                 </NavLink>
             </nav>
         </header>
