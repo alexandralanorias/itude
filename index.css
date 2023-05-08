@@ -231,15 +231,15 @@ footer {
     color: #FFEAD0;
 }
 
-.album-type.simple:hover, .album-type.simple.selected {
+.album-type.new:hover, .album-type.new.selected {
     background-color: #E17654;
 }
 
-.album-type.rugged:hover, .album-type.rugged.selected {
+.album-type.trending:hover, .album-type.trending.selected {
     background-color: #115E59;
 }
 
-.album-type.luxury:hover, .album-type.luxury.selected {
+.album-type.classic:hover, .album-type.classic.selected {
     background-color: #161616;
 }
 
